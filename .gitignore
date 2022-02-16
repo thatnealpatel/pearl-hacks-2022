@@ -1,1 +1,5 @@
+# Virtual Environment for Python3.10, created using `$ python3.10 -m venv venv`
 venv/
+
+# Secret files you don't want to expose to the internet!
+.env
