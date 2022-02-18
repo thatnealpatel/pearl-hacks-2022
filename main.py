@@ -59,6 +59,18 @@ logger.addHandler(ch)
 # keep track of some information and make it available to our bot! To keep
 # things simple, we are simply defining them as global. This may not be the
 # "best" practice, remember: we are learning. Build the MVP!
+# 
+# Fun Fact: Due to Python's nature, the GIL (Global Interpreter Lock) prevents 
+# true multi-threading, as you'd find in languages such as C++ or Go.
+#
+# For those who are studious, this code implements a naive threading model. This
+# is generally "okay" in this case because by not implementing a thread-safe
+# screen time buddy, the impact is limited to a few, rare misreads of the clock
+# that would be off by 1 second. Most importantly, only one worker updates the
+# `timer`, and a different (and only one) worker updates `last_notification`.
+#
+# As a follow up exercise, you could make modifications to this source code to
+# ensure that it is thread-safe. See reading: locks, mutexes, threading, python
 
 timer: int = 0
 last_notification: int = 0
