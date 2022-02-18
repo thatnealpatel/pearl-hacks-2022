@@ -1,3 +1,6 @@
+# Copyright 2022 Google LLC
+# Author: Neal Patel (nealpatel@google.com)
+
 import logging
 import os
 import threading
