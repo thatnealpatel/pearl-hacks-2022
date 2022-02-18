@@ -155,13 +155,13 @@ def main():
     dispatcher.add_handler(CommandHandler('start', start_handler))
     dispatcher.add_handler(CommandHandler('stop', stop_handler))
 
-    # Start the clock monitor worker (i.e. thread)
+    # Create the clock monitor worker (i.e. thread)
     clock_worker = threading.Thread(
             target=screen_time_clock,
             name='ClockWorker'
     )
 
-    # Start the screen monitor worker (i.e. thread)
+    # Create the screen monitor worker (i.e. thread)
     screen_monitor_worker = threading.Thread(
             target=screen_time_checker,
             name='SreenMonitorWorker',
